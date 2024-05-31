@@ -3,12 +3,6 @@
 ## Domain
 - The domain we worked on is ‘Movies’. We tried to generate around 8900 articles on different movies from different languages on Telugu Wikipedia.
 
-## Team
-* Chelpuri Abhijith - abhijith.chelpuri@research.iiit.ac.in
-* Aravapalli Akhilesh - aravapalli.akhilesh@research.iiit.ac.in
-* Supraja Alleni - suprajaalleni123@gmail.com
-* Danda Jahnavi - jahnavidanda.jd02@gmail.com
-
 ## Data Collection
 - The main basis for data collection is IMDb rating with minimum number of votes(10000).
 
@@ -59,19 +53,9 @@
 - Process followed, Tool used - Merge methods from Pandas Dataframe 
 - FinalKB format - csv
 - Final KB rows X columns - 8929(movies)*50(attributes) 
-- Final KB link - [github link ]- https://github.com/indicwiki-iiit/Movies
 - Issues → Workaround
     - There were multiple records for some movies because of merging multiple times → Manual correction
 
-## Version Control
-### Github
-- We used the Github repo provided by IIIT, to update all the changes that are done in our project regularly(weekly).
-### DeepNote
-- We used DeepNote for maintaining and editing code files (templates and render files) simultaneously.
-
-
-### Sample article 
- Link - {to be added after adding sample article to github}
 ##### Approach
 - Large number of movie Wikipedia pages were studied, regarding the common sections to be included for a movie and finally decided on the sections that are to be included. Then the available attributes are divided among their respective sections.
 #### Sections (Name → Description)
@@ -226,9 +210,6 @@ Text blob(Python library) - Not used
 ### Translation
 Bing Translate(Azure service): - Used
 - We have used this library to translate all our required attributes as we found out that it is keeping a better idea of context while translating , but we have found some issues with this as mentioned below.
-  - Issues:
-    - Has translation character limit upto 2M characters → We borrowed some of our friends’ IIIT accounts.
-    - It is not a free resource for non-student-partner Microsoft accounts, so others need to mention their credit card details to login  → We borrowed some of our friends’ IIIT accounts.
 ## XML Generation
 - Render.py generates the wikitext for every movie. This wikitext is dumped into a single xml file with the help of genxml.py.
 - This single xml file contains wikitext of each movie with distinct pageids.
@@ -250,8 +231,6 @@ Bing Translate(Azure service): - Used
 - Transliteration and translation are very handy to use, but only at the cost of spelling mistakes and grammatical errors, We can also try to find a better service provider which can help to reduce the manual labour.
 - While generating articles, we can also make sure that the content is not controversial.
 
-## Github
-> Repository Link : https://github.com/indicwiki-iiit/Movies
 
 Github Structure :
 
@@ -268,12 +247,9 @@ Github Structure :
     - _stats - Attrs-Record values.pdf_ -- This file has details about the attributes and their record count and it also has extra details about the stub articles, not stub articles, average, lowest, highest word count movie articles.
     - _stats - bool values.csv_ -- It has boolen representation for each record value, i.e. "1" indicating that the value is present and "0" means that the value is not present.
 
-### Templates
-> Github folder Link: https://github.com/indicwiki-iiit/Movies/tree/main/Templates
-- This folder contains the templates that are used for article generation
-  - _main_template.j2_ -- Contains the final Jinja2 Template for the article generation.
+
 ### Data
-> Github folder Link: https://github.com/indicwiki-iiit/Movies/tree/main/data
+> Github folder Link: https://github.com/ACLSRW2024anonymous/Text-Generation-Techniques-for-Wikipedia-of-low-resource-languages/tree/main/data
 - _Dataset8900 - FinalKB.csv_ -- This is the final dataset obtained after web scraping from the IMDB website using Selenium and wikidata using wptools.
 - _Accentremover.py_ -- Python Code to remove all the special characters with accents. ex. à,é
 - _Analyse.py_ -- Code used to analyse if the attribute holds any value for a particular record or not. So, for each attribute if there’s a value. It gives 1 and if there is not any value present it shows 0 and this is stored in a csv file.
@@ -285,7 +261,7 @@ Github Structure :
 - _Translate.py_ -- For transliterating attributes,this file is used.
 
 ### Scraping
-> Github folder Link: https://github.com/indicwiki-iiit/Movies/tree/main/scraping 
+> Github folder Link: https://github.com/ACLSRW2024anonymous/Text-Generation-Techniques-for-Wikipedia-of-low-resource-languages/tree/main/scraping
 - This folder contains files of codes written for all the extraction of attributes from different sources.
   - _extract_awards.py_ -- This code is used for extracting data from the IMDB awards page for every movie 
   - _extract_cast.py_ -- This code is used for extracting crew details like  set_decorator, art_director, film_editor, cinematography,production_design,composer,production_designer,producer from IMDB cast webpage.
@@ -296,25 +272,25 @@ Github Structure :
   - _links.py_ -- This contains links for awards,songs,cast and crew, surface level attributes.
   - _Wptools.py_ -- This code is used for extracting narrative location, distributed_by, distributed_format, part_of_series, main_subject and based_on attributes from wikidata using wptools.
 ### 123.pkl
-> Github file Link: https://github.com/indicwiki-iiit/Movies/blob/main/123.pkl
+> Github file Link: https://github.com/ACLSRW2024anonymous/Text-Generation-Techniques-for-Wikipedia-of-low-resource-languages/tree/main/123.pkl
 - This is the final pickle file generated from the dataset.
 ### Readme.md
-> Github file Link: https://github.com/indicwiki-iiit/Movies#readme
+> Github file Link: https://github.com/ACLSRW2024anonymous/Text-Generation-Techniques-for-Wikipedia-of-low-resource-languages/tree/main/readme.md
 - This file has links to the sample article created. It has English Wikipedia,Telugu Wikipedia and tewiki sandboxes. This also has a link to the documentation of what is done every week.  
 ### SWEETVIZ_REPORT.html:
-> Github file Link: https://github.com/indicwiki-iiit/Movies/blob/main/SWEETVIZ_REPORT.html
+> Github file Link: https://github.com/ACLSRW2024anonymous/Text-Generation-Techniques-for-Wikipedia-of-low-resource-languages/tree/main/SWEETVIZ_REPORT.html
 - This is an exploratory data analysis report made to check how many unique values are present for each attribute and how many missing values the attribute has.
 ### genXML.py
-> Github file Link: https://github.com/indicwiki-iiit/Movies/blob/main/genXML.py
+> Github file Link: https://github.com/ACLSRW2024anonymous/Text-Generation-Techniques-for-Wikipedia-of-low-resource-languages/tree/main/genXML.py
 - This file contains the code for generating an XML file which has the data after rendering for an article.
 ### makepkl.py:
-> Github file Link: https://github.com/indicwiki-iiit/Movies/blob/main/makepkl.py
+> Github file Link: https://github.com/ACLSRW2024anonymous/Text-Generation-Techniques-for-Wikipedia-of-low-resource-languages/tree/main/makepkl.py
 - This file contains code for reading the dataset and generating a pickle file
 ### render.py
-> Github file Link: https://github.com/indicwiki-iiit/Movies/blob/main/render.py
+> Github file Link: https://github.com/ACLSRW2024anonymous/Text-Generation-Techniques-for-Wikipedia-of-low-resource-languages/tree/main/render.py
 - This is the code used for rendering the movie articles using jinja2 template named main_template.j2 file in templates folder.
 ### requirements.txt:
-> Github file Link: https://github.com/indicwiki-iiit/Movies/blob/main/requirements.txt
+> Github file Link: https://github.com/ACLSRW2024anonymous/Text-Generation-Techniques-for-Wikipedia-of-low-resource-languages/tree/main/requirements.txt
 - This contains all the packages and libraries that are necessary for building this project.
 
 
